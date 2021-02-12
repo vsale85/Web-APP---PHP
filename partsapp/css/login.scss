@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    // font-family: 'Open Sans',
+    //     sans-serif;
+    font-family: 'Istok Web',
+        sans-serif;
+}
+
+@import "variables";
+
+body {
+    //  background-color: $mainBlue;
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+:focus {
+    outline: none;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    background-color: rgba(250, 252, 255, 0.5);
+
+
+
+    h1 {
+        text-align: center;
+        color: $txtWhite;
+        text-transform: capitalize;
+        margin: 30px 0;
+        padding: 20px 10px;
+
+    }
+
+    form {
+        text-align: center;
+        margin-top: 70px;
+
+    }
+
+    ::placeholder {
+        font-style: italic;
+        font-size: 16px;
+        opacity: 0.5;
+    }
+
+    input,
+    button {
+
+        width: 80%;
+        border: none;
+
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 18px;
+        background-color: $mainBlue;
+        color: $txtWhite;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 8px;
+    }
+
+    button:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(0, 98, 255, 0.24);
+        /* Lowering the shadow */
+    }
+
+    p {
+        font-size: 12px;
+        color: red;
+        margin-left: 10%;
+        text-align: left;
+
+
+    }
+
+    h6 {
+        margin-bottom: 10px;
+    }
+
+    #register_h1 {
+        margin: 0;
+    }
+
+    #register_form {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .login_form {
+
+        height: auto;
+    }
+}

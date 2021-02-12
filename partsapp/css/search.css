@@ -1,0 +1,386 @@
+h1 {
+  color: #fafcff;
+  padding: 5px;
+}
+
+/*********************/
+.search-main {
+  position: relative;
+}
+
+.input_date {
+  font-size: 18px;
+  border: none;
+  opacity: 0.8;
+  color: #555555;
+}
+
+.search-form {
+  background-color: #4287f5;
+  margin-top: 15px;
+  padding-left: 15px;
+  /* Customize the label (the container) */
+}
+
+.search-form .search-box::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.search-form .search-box input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+.search-form .search-box button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #9a26ff;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form .search-conditions {
+  display: inline-block;
+}
+
+.search-form .search-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search-form .search-date .date-lbl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 400px;
+  text-align: left;
+  padding: 3px !important;
+  color: #fafcff;
+  font-size: 18px;
+}
+
+.search-form .search-date input {
+  width: 200px;
+  color: #555555;
+}
+
+.search-form .search-conditions > label {
+  color: #fafcff;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /*** custom checkbox  ******/
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.search-form .search-conditions > label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.search-form .search-conditions > label .checkmark {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  background-color: #fafcff;
+  border-radius: 50%;
+}
+
+.search-form .search-conditions > label:hover input ~ .checkmark {
+  background-color: #40ff00;
+}
+
+.search-form .search-conditions > label input:checked ~ .checkmark {
+  background-color: #ff5971;
+}
+
+.search-form .search-conditions > label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.search-form .search-conditions > label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.search-form .search-conditions > label .check {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  background-color: #fafcff;
+}
+
+.search-form .search-conditions > label:hover input ~ .check {
+  background-color: #9e9e9e;
+}
+
+.search-form .search-conditions > label input:checked ~ .check {
+  background-color: #fafcff;
+}
+
+.search-form .search-conditions > label .check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.search-form .search-conditions > label input:checked ~ .check:after {
+  display: block;
+}
+
+.search-form .search-conditions > label .check:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #4287f5;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.input_update {
+  height: 30px !important;
+  resize: none;
+}
+
+.form_update .lbl_update {
+  text-transform: uppercase;
+}
+
+.form_update .lbl_update:nth-of-type(1) {
+  display: none;
+}
+
+.form_update .input_update:nth-of-type(1) {
+  display: none;
+}
+
+.form_update .input_update:nth-of-type(2) {
+  pointer-events: none;
+}
+
+.form_update .input_update:nth-last-of-type(2) {
+  height: 140px !important;
+}
+
+.form_update .input_update:last-of-type {
+  display: none;
+}
+
+.form_update .lbl_update:last-of-type {
+  display: none;
+}
+
+#sum {
+  border: 1px solid #40ff00;
+}
+
+.sum {
+  background-color: #61a0ff;
+  color: #fafcff;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .search-form {
+    margin: 15px 5px;
+    padding: 10px 0;
+  }
+  .result-table {
+    margin: 0 5px;
+  }
+  .sum-lbl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  table {
+    width: 100%;
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  table td {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: justify;
+    color: #fafcff;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff7926), to(#61a0ff));
+    background-image: linear-gradient(to right, #ff7926, #61a0ff);
+    margin-bottom: 1px;
+  }
+  tr td:nth-child(1),
+  th:nth-child(1) {
+    display: none;
+  }
+  tr td:nth-last-of-type(1),
+  th:nth-last-of-type(1) {
+    display: none;
+  }
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 50%;
+    text-transform: uppercase;
+    padding-left: 5px;
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 960px) {
+  table {
+    width: 100%;
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    margin-bottom: 8px;
+    width: 50%;
+    float: left;
+  }
+  table td {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: justify;
+    color: #fafcff;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff7926), to(#61a0ff));
+    background-image: linear-gradient(to right, #ff7926, #61a0ff);
+    margin-bottom: 1px;
+    height: 25px;
+    overflow: hidden;
+  }
+  tr td:nth-child(1),
+  th:nth-child(1) {
+    display: none;
+  }
+  tr td:nth-last-of-type(1),
+  th:nth-last-of-type(1) {
+    display: none;
+  }
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 50%;
+    text-transform: uppercase;
+    padding-left: 5px;
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .result-table {
+    overflow-x: hidden;
+    text-align: right;
+  }
+  .result-table label {
+    background-color: #61a0ff;
+    color: #fafcff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 10px;
+  }
+  .table-search-div {
+    overflow-x: auto;
+  }
+  .table-search {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    color: #fafcff;
+    font-size: 14px;
+    border: 1px solid #4287f5;
+    background-color: #4287f5;
+  }
+  .table-search tr td:nth-child(1),
+  .table-search th:nth-child(1) {
+    display: none;
+  }
+  .table-search tr td:nth-last-of-type(1),
+  .table-search th:nth-last-of-type(1) {
+    display: none;
+  }
+  .table-search tr:nth-child(even) {
+    background-color: #61a0ff;
+  }
+  .table-search tr {
+    overflow: hidden;
+  }
+  .table-search tr:hover {
+    background-color: #0048ff;
+    cursor: pointer;
+  }
+  .table-search th,
+  .table-search td {
+    text-align: center;
+    padding: 5px;
+    max-width: 1px;
+    word-wrap: break-word;
+  }
+  .table-search th {
+    background-color: #ff7926;
+    text-transform: uppercase;
+  }
+  .table-search tr > td:nth-last-of-type(2) {
+    white-space: nowrap;
+  }
+}
+/*# sourceMappingURL=search.css.map */

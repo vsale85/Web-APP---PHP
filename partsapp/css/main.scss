@@ -1,0 +1,408 @@
+@import "nav";
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    font-family: 'Poppins',
+        sans-serif;
+
+}
+
+html {
+    scrollbar-width: none; //mozilla hide scroll bar
+
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: $mainBlue;
+    width: 100%;
+    display: flex;
+    scrollbar-width: none;
+}
+
+.done {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    z-index: 4;
+}
+
+.backImg {
+    width: 700px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $mainBlue;
+    z-index: 0;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+ //   display: bloc;
+}
+
+.okta_img {
+    top: 200px;
+    max-width: 1049px;
+    transform: rotate(-12deg);
+    clip-path: polygon(50% 0%, 94% 5%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 2% 81%, 5% 35%, 28% 3%);
+
+}
+
+.small-service-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+
+    label {
+        margin: 0;
+    }
+
+}
+
+.manual {
+    // manual page
+    margin: 20px;
+    text-align: justify;
+    color: $txtWhite;
+
+    h4 {
+        padding: 3px 5px;
+        background-color: $lightBlue;
+    }
+
+    h6 {
+        text-align: center;
+    }
+}
+
+.service-radio {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+::placeholder {
+    font-style: italic;
+    font-size: 14px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    background-color: $mainBlue;
+
+}
+
+.content {
+    position: relative;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none; //scroll hidden for mozzila 
+
+}
+
+.main-sell {
+    height: 100%;
+
+}
+
+.form-sell {
+    margin: 60px;
+    padding-left: 20px;
+    margin-right: 0;
+}
+
+.form-sell fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+fieldset {
+    border: 2px solid $lightBlue;
+    border-radius: 5px;
+
+    legend {
+        margin-left: 30px;
+        background-color: $lightBlue;
+        font-size: 20px;
+        padding: 0 20px;
+        border-top-right-radius: 25px;
+        color: $txtWhite;
+    }
+
+    label,
+    input,
+    select {
+        margin: 15px 20px 0 20px;
+        font-size: 18px;
+        border: none;
+        color: $txtWhite;
+
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        opacity: 0.8;
+        color: $darkGray;
+    }
+
+    option {
+        border: none;
+        background-color: $lightBlue;
+        color: $darkGray;
+        width: inherit;
+    }
+
+    .btn-save {
+        background-color: $txtWhite;
+        color: $colorSave;
+
+        font-size: 20px;
+        transition: 1s;
+
+        &:hover {
+            font-weight: bold;
+            background-color: $colorSave;
+            color: $txtWhite;
+        }
+    }
+
+    .btn-reset {
+        background-color: $txtWhite;
+        color: $colorReset;
+        font-size: 20px;
+        transition: 1s;
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        &:hover {
+            font-weight: bold;
+            background-color: $colorReset;
+            color: $txtWhite;
+        }
+    }
+
+}
+
+textarea {
+    width: 400px;
+    height: 140px;
+    margin: 15px 20px 20px 20px;
+    font-size: 18px;
+    border: none;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    width: 250px;
+
+    .user {
+        position: relative;
+        background-color: $lightBlue;
+        border-radius: 1.5em;
+        width: 250px;
+        height: 80px;
+        color: $txtWhite;
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+        padding: 10px 2px 5px 2px;
+
+        p span {
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        p::before {
+            content: url('../Images/welcomeUser.png');
+            word-wrap: break-word;
+        }
+    }
+
+    .user:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-top-color: $lightBlue;
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -25px;
+        margin-bottom: -50px;
+    }
+
+    .out-links {
+        display: flex;
+        flex-direction: column;
+        margin-left: 160px;
+
+        a {
+            width: 32px;
+            padding: 15px;
+            text-align: center;
+            background-color: $lightBlue;
+            border-radius: 50%;
+            margin-top: 10px;
+            border: none;
+            transition: 1s;
+
+            &:hover {
+                background-color: $navBlue;
+            }
+        }
+
+        .fab {
+            font-size: 30px;
+            color: $darkGray;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 960px) {
+    .form-sell {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        flex-direction: column; //dodato
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
+        height: auto;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        padding: 0;
+
+        .backImg {
+            left: 0px;
+            overflow: hidden;
+            opacity: 0.6;
+        }
+
+        .main-sell {
+            margin: 5px;
+            padding: 0;
+            width: 100%;
+            padding-top: 10px;
+            z-index: 2;
+
+            .form-sell * {
+                margin: 0 auto;
+                padding: 5px 0;
+                width: 100%;
+                font-size: 16px;
+                border: none;
+            }
+
+            .form-sell {
+                margin: 0 auto;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            textarea {
+                height: 80px;
+            }
+        }
+    }
+
+    .date_input {
+
+        width: 100%;
+
+    }
+
+    .done {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .content {
+        height: auto;
+    }
+
+    .links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+
+        .user {
+            display: none;
+        }
+    }
+
+    .out-links {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-around !important;
+        margin: 0 !important;
+        margin-top: 30px;
+        padding: 10px;
+
+
+        a {
+            border: none;
+            margin: 0;
+            padding: 0;
+            background: none;
+            width: 35px;
+            height: 35px;
+            margin-bottom: 45px;
+        }
+
+        #logout {
+            margin-left: 50%;
+            margin-right: 50%;
+
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .backImg {
+        width: 50%;
+        height: 70%;
+        left: 50%;
+        top: 20%;
+    }
+
+}

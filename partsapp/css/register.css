@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  position: relative;
+  background: #007bff;
+  background: -webkit-gradient(linear, left top, right top, from(#0062E6), to(#33AEFF));
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+:focus {
+  outline: none;
+}
+
+.registration {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: auto;
+  background-color: rgba(250, 252, 255, 0.5);
+}
+
+.login_form h1 {
+  text-align: center;
+  color: #fafcff;
+  text-transform: capitalize;
+  font-size: 28px;
+}
+
+.login_form form {
+  text-align: center;
+}
+
+.login_form ::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.login_form :-ms-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.login_form ::-ms-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.login_form ::placeholder {
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.login_form input,
+.login_form button {
+  width: 80%;
+  border: none;
+}
+
+.login_form input {
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.login_form button {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 18px;
+  background-color: #4287f5;
+  color: #fafcff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+.login_form button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  -webkit-box-shadow: 3px 2px 22px 1px rgba(0, 98, 255, 0.24);
+          box-shadow: 3px 2px 22px 1px rgba(0, 98, 255, 0.24);
+  /* Lowering the shadow */
+}
+
+.login_form p {
+  font-size: 12px;
+  color: red;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.login_form h6 {
+  margin-bottom: 10px;
+}
+
+.login_form h3 {
+  color: #9a26ff;
+}
+
+@media screen and (min-width: 960px) {
+  hr {
+    display: none;
+  }
+  #confirm {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 250px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    color: #fafcff;
+  }
+  #admin-user {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    width: 250px;
+    padding: 0;
+    margin: 0;
+  }
+  #admin-password {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    width: 250px;
+    padding: 0;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=register.css.map */

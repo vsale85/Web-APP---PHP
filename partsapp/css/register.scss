@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+@import "variables";
+
+body {
+    position: relative;
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+:focus {
+    outline: none;
+}
+
+.registration {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    background-color: rgba(250, 252, 255, 0.5);
+
+
+
+    h1 {
+        text-align: center;
+        color: $txtWhite;
+        text-transform: capitalize;
+        font-size: 28px;
+
+    }
+
+    form {
+        text-align: center;
+
+    }
+
+    ::placeholder {
+        font-style: italic;
+        font-size: 16px;
+        opacity: 0.5;
+    }
+
+    input,
+    button {
+
+        width: 80%;
+        border: none;
+
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 18px;
+        background-color: $mainBlue;
+        color: $txtWhite;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 8px;
+    }
+
+    button:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(0, 98, 255, 0.24);
+        /* Lowering the shadow */
+    }
+
+    p {
+        font-size: 12px;
+        color: red;
+        margin-left: 10%;
+        text-align: left;
+    }
+
+    h6 {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: $colorSave;
+    }
+
+}
+
+@media screen and (max-width: 960px) {}
+
+@media screen and (min-width: 960px) {
+    hr {
+        display: none;
+
+    }
+
+    #confirm {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 250px;
+        line-height: 30px;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: left;
+        color: $txtWhite;
+    }
+
+    #admin-user {
+        position: absolute;
+        top: 45px;
+        right: 20px;
+        width: 250px;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #admin-password {
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        width: 250px;
+        padding: 0;
+        margin: 0;
+
+    }
+}

@@ -1,0 +1,196 @@
+@import "variables";
+
+
+// side navigation
+//***************************************
+.navigation {
+    width: 300px;
+    border-right: 2px solid $lightBlue;
+    display: flex;
+    flex: 0 0 auto;
+    background-color: $navBlue;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 3;
+    .user_mobile{
+        display: none;
+    }
+}
+
+.navigation img {
+    border-bottom: 1px solid $lightBlue;
+    margin: 0;
+    z-index: 1;
+
+}
+
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+#menu {
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+.navigation a,
+.responsive-nav {
+    text-decoration: none;
+    display: block;
+    margin: 0px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: $txtWhite;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    text-shadow: none;
+    position: relative;
+    padding-bottom: 0;
+}
+
+#hamburger {
+    padding: 10px 2px 5px 2px;
+    text-align: right;
+}
+
+
+.active {
+    background-color: $lightBlue;
+}
+
+.responsive-nav {
+    font-style: italic;
+    display: none;
+}
+
+.servisi {
+    display: block;
+}
+
+#servisi,
+#navigation {
+    display: none;
+}
+
+.navigation {
+    user-select: none;
+
+    #search-link {
+        margin-bottom: 15px;
+    }
+
+}
+
+#navigation {
+    &:checked~#menu {
+        display: block;
+    }
+}
+
+#servisi {
+    &:checked+#servisi-list {
+        display: block;
+    }
+}
+
+#mobile-search {
+    display: none;
+}
+
+///////***** animated bottom nav link border
+.navigation a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: $txtWhite;
+    transition: width 1s ease 0s, left 1s ease 0s;
+    width: 0;
+}
+
+.navigation a:hover:after {
+    width: 100%;
+    left: 0;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        background-color: $darkBlue;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .content {
+        margin-top: 60px;
+    }
+
+    .navigation {
+        justify-content: flex-start;
+        min-height: 56px;
+        width: 100%;
+        border: none;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        .user_mobile {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 5px;
+            margin: 0 auto;
+            text-align: center;
+            color: $txtWhite;
+            font-size: 20px;
+        }
+
+        ul {
+            display: none;
+        }
+
+        img {
+            display: none;
+        }
+
+        .responsive-nav {
+            display: block;
+
+        }
+
+        .navigation a {
+            padding: 10px;
+        }
+
+        #search-link {
+            display: none;
+        }
+
+        #mobile-search {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: $txtWhite;
+            padding: 12px 10px;
+            margin: 0;
+            width: 40px;
+
+        }
+
+        #menu {
+            margin: 0;
+            padding: 0;
+
+        }
+
+    }
+
+}

@@ -1,0 +1,436 @@
+@import "variables";
+
+h1 {
+    color: $txtWhite;
+    padding: 5px;
+}
+
+/*********************/
+.search-main {
+    position: relative;
+}
+
+.input_date {
+
+    font-size: 18px;
+    border: none;
+    opacity: 0.8;
+    color: $darkGray;
+}
+
+.search-form {
+    background-color: $mainBlue;
+    margin-top: 15px;
+    padding-left: 15px;
+
+    .search-box {
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        input {
+
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        button {
+            box-sizing: border-box;
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: $colorSave;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+
+        }
+    }
+
+    .search-conditions {
+        display: inline-block;
+
+    }
+
+
+    .search-date {
+        display: flex;
+        flex-direction: column;
+
+        .date-lbl {
+            display: flex;
+            justify-content: space-between;
+            max-width: 400px;
+            text-align: left;
+            padding: 3px !important;
+            color: $txtWhite;
+            font-size: 18px;
+        }
+
+        input {
+            width: 200px;
+            color: $darkGray;
+        }
+    }
+
+    ///*************** customize radios
+    /* Customize the label (the container) */
+    .search-conditions>label {
+        color: $txtWhite;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 20px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        /* Hide the browser's default radio button */
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom radio button */
+        .checkmark {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            height: 20px;
+            width: 20px;
+            background-color: $txtWhite;
+            border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        &:hover input~.checkmark {
+            background-color: $green;
+        }
+
+        /* When the radio button is checked, add a blue background */
+        input:checked~.checkmark {
+            background-color: $pink;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /*** custom checkbox  ******/
+        ////
+
+        .check {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            height: 20px;
+            width: 20px;
+            background-color: $txtWhite;
+        }
+
+        /* On mouse-over, add a grey background color */
+        &:hover input~.check {
+            background-color: $lightGray;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        input:checked~.check {
+            background-color: $txtWhite;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .check:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        input:checked~.check:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .check:after {
+            left: 6px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid $mainBlue;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+    }
+}
+
+.input_update {
+    // update page input fields
+    height: 30px !important;
+    resize: none;
+
+}
+
+//*****     Search  table style         *****//
+.form_update {
+    .lbl_update {
+        text-transform: uppercase;
+    }
+
+    .lbl_update:nth-of-type(1) {
+        //targeting id label to displey none
+        display: none;
+    }
+
+    .input_update:nth-of-type(1) {
+        //targeting id input field to displey none
+        display: none;
+    }
+
+    .input_update:nth-of-type(2) {
+        //targeting date input field to disable change
+        pointer-events: none;
+    }
+
+    .input_update:nth-last-of-type(2) {
+        //targeting note input field to enlarge
+        height: 140px !important;
+    }
+
+    .input_update:last-of-type {
+        //targeting user_id input field to displey none
+        display: none;
+    }
+
+    .lbl_update:last-of-type {
+        //targeting user_id label to displey none
+        display: none;
+    }
+}
+
+#sum {
+    border: 1px solid $green;
+
+}
+
+.sum {
+    background-color: $lightBlue;
+    color: $txtWhite;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 960px) {
+    .search-form {
+        margin: 15px 5px;
+        padding: 10px 0;
+    }
+
+    .result-table {
+        margin: 0 5px;
+    }
+
+    .sum-lbl {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    table {
+        width: 100%;
+
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        margin-bottom: 8px;
+        width: 100%; //dodato
+    }
+
+    table td {
+        display: flex;
+        text-align: justify;
+        color: $txtWhite;
+        background-image: linear-gradient(to right, $colorReset, $lightBlue);
+        margin-bottom: 1px;
+    }
+
+    tr td:nth-child(1),
+    th:nth-child(1) {
+        display: none;
+    }
+
+    tr td:nth-last-of-type(1),
+    th:nth-last-of-type(1) {
+        display: none;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 50%;
+        text-transform: uppercase;
+        padding-left: 5px;
+        text-align: justify;
+    }
+
+
+}
+
+@media screen and (max-width: 1600px) and (min-width: 960px) {
+    table {
+        width: 100%;
+
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        margin-bottom: 8px;
+        width: 50%; //dodato
+        float: left; //dodato
+
+    }
+
+    table td {
+        display: flex;
+        text-align: justify;
+        color: $txtWhite;
+        background-image: linear-gradient(to right, $colorReset, $lightBlue);
+        margin-bottom: 1px;
+        height: 25px;
+        overflow: hidden;
+    }
+
+    tr td:nth-child(1),
+    th:nth-child(1) {
+        display: none;
+    }
+
+    tr td:nth-last-of-type(1),
+    th:nth-last-of-type(1) {
+        display: none;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 50%;
+        text-transform: uppercase;
+        padding-left: 5px;
+        text-align: justify;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1600px) {
+    .result-table {
+        overflow-x: hidden;
+        text-align: right;
+
+        label {
+            ///  sum label('s)  *******
+            background-color: $lightBlue;
+            color: $txtWhite;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 0 10px;
+
+        }
+    }
+
+    .table-search-div {
+        overflow-x: auto;
+
+    }
+
+    .table-search {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        color: $txtWhite;
+        font-size: 14px;
+        border: 1px solid $mainBlue;
+        background-color: $mainBlue;
+
+        tr td:nth-child(1),
+        th:nth-child(1) {
+            display: none;
+        }
+
+        tr td:nth-last-of-type(1),
+        th:nth-last-of-type(1) {
+            display: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: $lightBlue;
+        }
+
+        tr {
+
+            overflow: hidden;
+        }
+
+        tr:hover {
+            background-color: $darkBlue;
+            cursor: pointer;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 5px;
+            max-width: 1px;
+            word-wrap: break-word;
+
+        }
+
+        th {
+            background-color: $colorReset;
+            text-transform: uppercase;
+
+        }
+
+        tr>td:nth-last-of-type(2) {
+            /// this is "note" column in all tables from db- preventing from expanding td
+            white-space: nowrap;
+
+        }
+
+    }
+
+
+}
